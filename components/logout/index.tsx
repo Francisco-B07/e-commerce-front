@@ -1,7 +1,7 @@
-import { useSetToken } from "@/lib/hooks";
-import router from "next/router";
+import { useGetToken, useSetToken } from "@/lib/hooks";
 export function LogoutComponent() {
+  const token = useGetToken();
   useSetToken("");
-  router.push("/");
+
   return <></>;
 }

@@ -13,13 +13,17 @@ export function ProductPageComponent(props: productProp) {
   const dataProduct = useProduct(props.productId);
   const product = dataProduct?.product?.object;
 
-  const urlOrden = "order?productId=" + props.productId;
+  console.log(product);
+
+  const urlOrden = "/order?productId=" + props.productId;
 
   async function handleComprar() {
     const mercadoPagoURL = await fetchAPI(urlOrden, {
       method: "POST",
+      body: {},
     });
-    router.push(mercadoPagoURL);
+
+    router.push(mercadoPagoURL.url);
   }
 
   return (
