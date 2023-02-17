@@ -7,14 +7,9 @@ import { useForm } from "react-hook-form";
 import { Container, Root } from "./styled";
 import router from "next/router";
 
-type productProp = {
-  productId: string;
-};
-
 export function ProfileComponent() {
   const { register, handleSubmit, watch } = useForm();
   const user = useMe();
-  console.log(user);
 
   async function handleForm(data: any) {
     const { message } = await editUser(data.name, data.address, data.telefono);
