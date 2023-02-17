@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+:root {
+  --blanco: #ffffff;
+  --negro: #000000;
+  --azul: #4f7cac;
+  --celeste: #91e5f6;
+  --naranja: #ffc700;
+  --azul-oscuro: #201e50;
+  --fucsia: #e75a7c;
+  --border-radius: 8px;
+}
