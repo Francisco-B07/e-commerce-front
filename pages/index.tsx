@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Reni</title>
       </Head>
       <Layout>
         <HomePageComponent></HomePageComponent>
