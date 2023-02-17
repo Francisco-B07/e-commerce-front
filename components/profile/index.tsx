@@ -23,11 +23,11 @@ export function ProfileComponent() {
           <form onSubmit={handleSubmit(handleForm)}>
             <SubTitle>Perfil</SubTitle>
             <Tiny style={{ margin: "15px 0 4px 0" }}>Nombre Completo</Tiny>
-            <Input {...register("name")} defaultValue={user.name} />
+            <Input {...register("name")} defaultValue={user?.name} />
             <Tiny style={{ margin: "15px 0 4px 0" }}>Dirección</Tiny>
-            <Input {...register("address")} defaultValue={user.address} />
+            <Input {...register("address")} defaultValue={user?.address} />
             <Tiny style={{ margin: "15px 0 4px 0" }}>Teléfono</Tiny>
-            <Input {...register("telefono")} defaultValue={user.telefono} />
+            <Input {...register("telefono")} defaultValue={user?.telefono} />
             <SecondaryButton style={{ marginTop: "34px" }}>
               Guardar
             </SecondaryButton>

@@ -4,5 +4,9 @@ import router from "next/router";
 export default function Logout() {
   useSetToken("");
   router.push("/");
-  return <></>;
+  return (
+    <>
+      <div>Logout</div>
+    </>
+  );
 }
