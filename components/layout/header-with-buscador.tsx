@@ -1,5 +1,5 @@
 import { useMe, useGetToken } from "@/lib/hooks";
-import { BurguerButtons, LoginButton } from "@/ui/button";
+import { BurguerButtons } from "@/ui/button";
 import Link from "next/link";
 import css from "./index.module.css";
 import { LogoHeader } from "ui/icons";

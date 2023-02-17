@@ -6,13 +6,14 @@ import { useRouter } from "next/router";
 export default function Search() {
   const router = useRouter();
   const query = router.query.q as any;
+  const page = 0;
   return (
     <>
       <Head>
         <title>Search</title>
       </Head>
       <LayoutWithBuscador>
-        <SearchPageComponent query={query} />
+        <SearchPageComponent query={query} page={page} />
       </LayoutWithBuscador>
     </>
   );

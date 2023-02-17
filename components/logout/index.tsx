@@ -1,5 +1,4 @@
 import { saveToken } from "@/lib/api";
-import { useRemoveToken } from "@/lib/hooks";
 import { PrimaryButton } from "@/ui/button";
 import Link from "next/link";
 import styled from "styled-components";

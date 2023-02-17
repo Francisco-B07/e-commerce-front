@@ -1,6 +1,5 @@
 import { LoginButton } from "@/ui/button";
 import { Input } from "@/ui/textfield";
-import { SubTitle } from "@/ui/texts";
 import styled from "styled-components";
 
 export const BuscadorForm = styled.form`

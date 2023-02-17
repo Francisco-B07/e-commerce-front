@@ -13,7 +13,6 @@ export function LoginComponent() {
 
   async function HandleEmailForm(data: any) {
     const email = data.email;
-    console.log({ email });
 
     setEmail(email);
     sendCode(email);
@@ -21,7 +20,6 @@ export function LoginComponent() {
 
   async function HandleCodeForm(data: any) {
     const code = data.code;
-    console.log({ code });
 
     try {
       await getToken(email, code);

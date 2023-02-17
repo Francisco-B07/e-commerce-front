@@ -51,16 +51,16 @@ export function useProduct(productId: string) {
   }
 }
 
-export function useProducts(query: string) {
+export function useProducts(query: string, page: number) {
+  const offset = 5 * page;
   const { data, error, isLoading } = useSWR(
-    "/search?limit=5&q=" + query,
+    "/search?limit=5&offset=" + offset + "&q=" + query,
     fetchAPI,
     {
       revalidateOnFocus: false,
     }
   );
   try {
-    console.log("productos", data);
     return data;
   } catch (e) {
     throw { message: error };

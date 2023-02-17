@@ -21,6 +21,9 @@ export const ButtonComprar = styled(Button)`
   color: var(--negro);
   height: 63px;
   font-size: 32px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 `;
 
 export const SecondaryButton = styled(Button)`

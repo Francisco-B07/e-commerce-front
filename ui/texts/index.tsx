@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-type subTitleProps = {};
-
 export const Title = styled.h1`
   font-weight: 700;
   font-size: 48px;

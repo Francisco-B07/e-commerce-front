@@ -1,5 +1,4 @@
 import { LoginComponent } from "@/components/login";
-
 import { Layout } from "@/components/layout";
 
 export default function LoginPage() {
