@@ -11,7 +11,7 @@ import { ContainerCard, ContainerCards } from "@/ui/card-container";
 
 export function HomePageComponent() {
   const { register, handleSubmit, watch } = useForm();
-  const products = useProducts("");
+  const products = useProducts("", 0);
 
   const [query, setQuery] = useState("");
   let queryWatch = watch("query");
