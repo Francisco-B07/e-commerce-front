@@ -7,10 +7,18 @@ export function Footer() {
     <FooterContainer>
       <ContainerLinks>
         <div>
-          <Body style={{ color: "var(--blanco)" }}>Ingresar</Body>
-          <Body style={{ color: "var(--blanco)" }}>Mi Perfil</Body>
-          <Body style={{ color: "var(--blanco)" }}>Buscar</Body>
-          <Body style={{ color: "var(--blanco)" }}>Logout</Body>
+          <Link href="/signin" style={{ textDecorationLine: "none" }}>
+            <Body style={{ color: "var(--blanco)" }}>Ingresar</Body>
+          </Link>
+          <Link href="/profile" style={{ textDecorationLine: "none" }}>
+            <Body style={{ color: "var(--blanco)" }}>Mi Perfil</Body>
+          </Link>
+          <Link href="/search?q=" style={{ textDecorationLine: "none" }}>
+            <Body style={{ color: "var(--blanco)" }}>Buscar</Body>
+          </Link>
+          <Link href="/logout" style={{ textDecorationLine: "none" }}>
+            <Body style={{ color: "var(--blanco)" }}>Logout</Body>
+          </Link>
         </div>
         <div>
           <Large style={{ color: "var(--blanco)" }}>Redes</Large>
