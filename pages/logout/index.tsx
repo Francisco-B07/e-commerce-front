@@ -1,7 +1,7 @@
-import { saveToken } from "@/lib/api";
+import { useSetToken } from "@/lib/hooks";
 import router from "next/router";
 
 export default function Logout() {
-  saveToken("");
+  useSetToken("");
   router.push("/");
 }

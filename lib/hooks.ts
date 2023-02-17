@@ -1,6 +1,6 @@
 import useSWR from "swr";
 import useSWRInmutable from "swr/immutable";
-import { fetchAPI, getSavedToken } from "lib/api";
+import { fetchAPI, getSavedToken, saveToken } from "lib/api";
 
 export function useMe() {
   const { data, error, isLoading } = useSWR("/me", fetchAPI, {
@@ -13,8 +13,16 @@ export function useMe() {
   }
 }
 
-export function useToken() {
+export function useGetToken() {
   const { data, error, isLoading } = useSWR("auth_token", getSavedToken);
+  try {
+    return data;
+  } catch (e) {
+    throw { message: error };
+  }
+}
+export function useSetToken(token: string) {
+  const { data, error, isLoading } = useSWR(token, saveToken);
   try {
     return data;
   } catch (e) {

@@ -1,4 +1,4 @@
-import { useMe, useToken } from "@/lib/hooks";
+import { useMe, useGetToken } from "@/lib/hooks";
 import { BurguerButtons } from "@/ui/button";
 import Link from "next/link";
 import css from "./index.module.css";
@@ -9,7 +9,7 @@ import router from "next/router";
 import { LoginButtonHeader } from "./styled";
 
 export function Header() {
-  const token = useToken();
+  const token = useGetToken();
   const dataUser = useMe();
   const [clicked, setClicked] = useState(false);
 

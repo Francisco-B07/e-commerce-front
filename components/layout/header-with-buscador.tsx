@@ -1,4 +1,4 @@
-import { useMe, useToken } from "@/lib/hooks";
+import { useMe, useGetToken } from "@/lib/hooks";
 import { BurguerButtons, LoginButton } from "@/ui/button";
 import Link from "next/link";
 import css from "./index.module.css";
@@ -10,7 +10,7 @@ import { Buscador } from "./buscador";
 import { LoginButtonHeader } from "./styled";
 
 export function HeaderWithBuscador() {
-  const token = useToken();
+  const token = useGetToken();
   const dataUser = useMe();
   const [clicked, setClicked] = useState(false);
 
