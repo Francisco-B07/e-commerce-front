@@ -1,10 +1,9 @@
-// import { TextField } from "@/ui/textfield";
-import { Input } from "@/ui/textfield";
+import { ImageCard } from "@/ui/card";
 import styled from "styled-components";
 
 export const Root = styled.div`
   min-height: 88vh;
-  max-width: 100%;
+  width: 100%;
   padding: 66px 35px 0px;
   display: flex;
   flex-direction: column;
@@ -13,28 +12,29 @@ export const Root = styled.div`
 `;
 
 export const Container = styled.div`
-  max-width: 457px;
+  max-width: 370px;
+  @media (min-width: 1280px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
 `;
 
-export const BuscadorForm = styled.form`
-  margin-top: -1px;
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  background: var(--negro);
+export const ImageProduct = styled(ImageCard)`
+  @media (min-width: 1280px) {
+    width: 808px;
+    min-height: 384px;
+    margin-right: 50px;
+    object-fit: contain;
+  }
 `;
 
-export const ContainerForm = styled.div`
-  max-width: 450px;
-  min-height: 90px;
+export const ProductInfo = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-`;
 
-export const InputSearch = styled(Input)`
-  background: var(--negro);
-  color: var(--blanco);
-  border: 3px solid var(--blanco);
+  @media (min-width: 1280px) {
+    min-width: 421px;
+  }
 `;

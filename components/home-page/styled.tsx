@@ -21,4 +21,5 @@ export const LogoReni = styled.img`
   border-radius: 100%;
   width: 150px;
   margin-top: 50px;
+  margin-bottom: 50px;
 `;

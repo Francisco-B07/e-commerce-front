@@ -1,5 +1,4 @@
-import { HomePageComponent } from "@/components/home-page";
-import { Layout } from "@/components/layout";
+import { LayoutWithBuscador } from "@/components/layout/layout-with-buscador";
 import { SearchPageComponent } from "@/components/search-page";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -12,9 +11,9 @@ export default function Search() {
       <Head>
         <title>Search</title>
       </Head>
-      <Layout>
-        <SearchPageComponent queryURL={query} />
-      </Layout>
+      <LayoutWithBuscador>
+        <SearchPageComponent query={query} />
+      </LayoutWithBuscador>
     </>
   );
 }

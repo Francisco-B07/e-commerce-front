@@ -1,13 +1,17 @@
 import { useForm } from "react-hook-form";
 import { PrimaryButton } from "@/ui/button";
 import { Input } from "@/ui/textfield";
-import { Title } from "@/ui/texts";
+import { SubTitle, Title } from "@/ui/texts";
 import Link from "next/link";
 import { SearchForm, Root, LogoReni } from "./styled";
 import { useEffect, useState } from "react";
+import { Card } from "@/ui/card";
+import { useProducts } from "@/lib/hooks";
+import { ContainerCard, ContainerCards } from "@/ui/card-container";
 
 export function HomePageComponent() {
   const { register, handleSubmit, watch } = useForm();
+  const products = useProducts("");
 
   const [query, setQuery] = useState("");
   let queryWatch = watch("query");
@@ -36,6 +40,23 @@ export function HomePageComponent() {
           alt="Logo RENI"
         />
       </Link>
+      <SubTitle style={{ textAlign: "center" }}>Productos destacados</SubTitle>
+      <ContainerCards>
+        {products?.results.map((product: any) => (
+          <ContainerCard key={product.objectID}>
+            <Link
+              href={`/products/${product.objectID}`}
+              style={{ textDecorationLine: "none", color: "initial" }}
+            >
+              <Card
+                nombre={product.name}
+                precio={product.unitCost}
+                imageURL={product.imageURL}
+              />
+            </Link>
+          </ContainerCard>
+        ))}
+      </ContainerCards>
     </Root>
   );
 }

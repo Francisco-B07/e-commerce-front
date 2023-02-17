@@ -1,9 +1,11 @@
+import { editUser } from "@/lib/api";
 import { useMe } from "@/lib/hooks";
 import { SecondaryButton } from "@/ui/button";
 import { Input } from "@/ui/textfield";
 import { SubTitle, Tiny } from "@/ui/texts";
 import { useForm } from "react-hook-form";
 import { Container, Root } from "./styled";
+import router from "next/router";
 
 type productProp = {
   productId: string;
@@ -14,7 +16,10 @@ export function ProfileComponent() {
   const user = useMe();
   console.log(user);
 
-  function handleForm(data: any) {}
+  async function handleForm(data: any) {
+    const { message } = await editUser(data.name, data.address, data.telefono);
+    router.push("/");
+  }
 
   return (
     <>

@@ -7,7 +7,7 @@ type CardProps = {
   imageURL: string;
 };
 
-export const ContainerCard = styled.div`
+const Container = styled.div`
   width: 315px;
   height: 321px;
   border: 4px solid #000000;
@@ -33,12 +33,12 @@ export const FooterCard = styled.div`
 
 export function Card(props: CardProps) {
   return (
-    <ContainerCard>
+    <Container>
       <ImageCard src={props.imageURL} alt={props.nombre} />
       <FooterCard>
         <Large>{props.nombre}</Large>
         <SubTitle>${props.precio}</SubTitle>
       </FooterCard>
-    </ContainerCard>
+    </Container>
   );
 }

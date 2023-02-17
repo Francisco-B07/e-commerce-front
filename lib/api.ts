@@ -26,6 +26,20 @@ export async function fetchAPI(input: RequestInfo, options: any) {
   }
 }
 
+export async function editUser(
+  name: string,
+  address: string,
+  telefono: string
+) {
+  return fetchAPI("/me", {
+    method: "PATCH",
+    body: {
+      name,
+      address,
+      telefono,
+    },
+  });
+}
 export async function sendCode(email: string) {
   return fetchAPI("/auth", {
     method: "POST",

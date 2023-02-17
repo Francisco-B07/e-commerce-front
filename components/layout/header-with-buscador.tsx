@@ -1,14 +1,15 @@
 import { useMe, useToken } from "@/lib/hooks";
-import { BurguerButtons } from "@/ui/button";
+import { BurguerButtons, LoginButton } from "@/ui/button";
 import Link from "next/link";
 import css from "./index.module.css";
 import { LogoHeader } from "ui/icons";
 import { useState } from "react";
 import { Body, Large, SubTitle } from "@/ui/texts";
 import router from "next/router";
+import { Buscador } from "./buscador";
 import { LoginButtonHeader } from "./styled";
 
-export function Header() {
+export function HeaderWithBuscador() {
   const token = useToken();
   const dataUser = useMe();
   const [clicked, setClicked] = useState(false);
@@ -34,6 +35,7 @@ export function Header() {
         </Link>
         <BurguerButtons clicked={clicked} handleClick={clickBurguerButtons} />
       </div>
+      <Buscador />
       <Link href="/signin">
         <LoginButtonHeader>Ingresar</LoginButtonHeader>
       </Link>
@@ -60,11 +62,7 @@ export function Header() {
         </Link>
 
         <div className={css.userContainer}>
-          <Body
-            className={`${css.user} ${token ? "" : css.inactiveCerrarSesion}`}
-          >
-            {dataUser ? dataUser.email : ""}
-          </Body>
+          <Body className={css.user}>{dataUser ? dataUser.email : ""}</Body>
           <Link
             href="/logout"
             onClick={clickBurguerButtons}

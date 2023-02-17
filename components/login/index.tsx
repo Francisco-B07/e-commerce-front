@@ -4,7 +4,7 @@ import Router from "next/router";
 import { Input } from "@/ui/textfield";
 import { Body, SubTitle, Tiny } from "@/ui/texts";
 import { SecondaryButton } from "@/ui/button";
-import { Root } from "./styled";
+import { Container, Root } from "./styled";
 import { useForm } from "react-hook-form";
 
 export function LoginComponent() {
@@ -40,26 +40,28 @@ export function LoginComponent() {
 
   return (
     <Root>
-      <form onSubmit={handleSubmit(HandleEmailForm)} style={emailFormStyle}>
-        <SubTitle>Ingresar</SubTitle>
-        <label htmlFor="">
-          <Tiny>Email</Tiny>
-          <Input placeholder="email@gmail.com" {...register("email")} />
-        </label>
-        <SecondaryButton style={{ marginTop: "14px" }}>
-          Continuar
-        </SecondaryButton>
-      </form>
+      <Container>
+        <form onSubmit={handleSubmit(HandleEmailForm)} style={emailFormStyle}>
+          <SubTitle>Ingresar</SubTitle>
+          <label htmlFor="">
+            <Tiny>Email</Tiny>
+            <Input placeholder="email@gmail.com" {...register("email")} />
+          </label>
+          <SecondaryButton style={{ marginTop: "14px" }}>
+            Continuar
+          </SecondaryButton>
+        </form>
 
-      <form onSubmit={handleSubmit(HandleCodeForm)} style={codeFormStyle}>
-        <SubTitle>Código</SubTitle>
+        <form onSubmit={handleSubmit(HandleCodeForm)} style={codeFormStyle}>
+          <SubTitle>Código</SubTitle>
 
-        <Input placeholder="223344" {...register("code")} />
-        <Body style={{ textAlign: "center" }}>
-          Te envíamos un códigoa tu mail
-        </Body>
-        <SecondaryButton>Ingresar</SecondaryButton>
-      </form>
+          <Input placeholder="223344" {...register("code")} />
+          <Body style={{ textAlign: "center" }}>
+            Te envíamos un códigoa tu mail
+          </Body>
+          <SecondaryButton>Ingresar</SecondaryButton>
+        </form>
+      </Container>
     </Root>
   );
 }

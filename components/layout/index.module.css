@@ -1,7 +1,7 @@
 .header {
   padding: 20px;
   background-color: var(--negro);
-  height: 12vh;
+  min-height: 12vh;
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
@@ -9,7 +9,8 @@
 
 @media (min-width: 1280px) {
   .header {
-    justify-content: space-around;
+    padding: 20px 50px;
+    justify-content: space-between;
     flex-direction: row;
   }
 }
