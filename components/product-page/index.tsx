@@ -27,7 +27,8 @@ export function ProductPageComponent(props: productProp) {
       });
       router.push(mercadoPagoURL.url);
     } else {
-      alert("Para poder comprar debes estar logueado!");
+      alert("Para poder comprar debes loguearte!");
+      router.push("/signin");
     }
   }
 
