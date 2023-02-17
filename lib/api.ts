@@ -69,3 +69,6 @@ export function saveToken(token: string) {
 export function getSavedToken() {
   return localStorage.getItem("auth_token");
 }
+export function removeToken() {
+  return localStorage.removeItem("auth_token");
+}

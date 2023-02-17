@@ -62,7 +62,11 @@ export function HeaderWithBuscador() {
         </Link>
 
         <div className={css.userContainer}>
-          <Body className={css.user}>{dataUser ? dataUser.email : ""}</Body>
+          <Body
+            className={`${css.user} ${token ? "" : css.inactiveCerrarSesion}`}
+          >
+            {dataUser ? dataUser.email : ""}
+          </Body>
           <Link
             href="/logout"
             onClick={clickBurguerButtons}
