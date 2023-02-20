@@ -78,12 +78,12 @@ export function SearchPageComponent(props: SearchPageComponentProps) {
           <BodyBold
             style={{
               marginTop: "10px",
-              minWidth: "75px",
+              minWidth: "90px",
               textAlign: "center",
               color: "var(--azul)",
             }}
           >
-            Página {page + 1}
+            Página {page + 1}/{Math.ceil(total / 5)}
           </BodyBold>
           <PrimaryButton style={styleSiguiente} onClick={handleSiguente}>
             Siguiente

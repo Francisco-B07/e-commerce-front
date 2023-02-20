@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { PrimaryButton } from "@/ui/button";
 import { Input } from "@/ui/textfield";
-import { SubTitle, Title } from "@/ui/texts";
+import { Large, SubTitle, Title } from "@/ui/texts";
 import Link from "next/link";
 import { SearchForm, Root, LogoReni } from "./styled";
 import { useEffect, useState } from "react";
@@ -57,6 +57,16 @@ export function HomePageComponent() {
           </ContainerCard>
         ))}
       </ContainerCards>
+      <Link
+        href={`/search?q=`}
+        style={{
+          textDecorationLine: "none",
+          color: "var(--azul)",
+          marginBottom: "30px",
+        }}
+      >
+        <Large> ver más {">>"} </Large>
+      </Link>
     </Root>
   );
 }

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Root = styled.div`
   min-height: 88vh;
-  padding: 66px 35px 0px;
+  padding: 66px 25px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
