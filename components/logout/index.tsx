@@ -1,7 +1,9 @@
 import { saveToken } from "@/lib/api";
+import { useMe } from "@/lib/hooks";
 import { PrimaryButton } from "@/ui/button";
 import Link from "next/link";
 import styled from "styled-components";
+import router from "next/router";
 
 export const Root = styled.div`
   min-height: 58vh;
@@ -14,19 +16,18 @@ export const Root = styled.div`
 export function LogoutComponent() {
   async function handlerLogout() {
     await saveToken("");
+    router.push("/signin");
   }
 
   return (
     <>
       <Root>
-        <Link href="/">
-          <PrimaryButton
-            style={{ height: "50px", width: "300px" }}
-            onClick={handlerLogout}
-          >
-            Confirmar Logout
-          </PrimaryButton>
-        </Link>
+        <PrimaryButton
+          style={{ height: "50px", width: "300px" }}
+          onClick={handlerLogout}
+        >
+          Confirmar Logout
+        </PrimaryButton>
       </Root>
     </>
   );

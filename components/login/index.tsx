@@ -23,7 +23,7 @@ export function LoginComponent() {
 
     try {
       await getToken(email, code);
-      Router.push("/");
+      Router.push("/profile");
     } catch (e) {
       console.error(e);
     }

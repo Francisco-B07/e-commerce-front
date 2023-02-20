@@ -3,9 +3,7 @@ import useSWRInmutable from "swr/immutable";
 import { fetchAPI, getSavedToken, removeToken, saveToken } from "lib/api";
 
 export function useMe() {
-  const { data, error, isLoading } = useSWR("/me", fetchAPI, {
-    revalidateOnFocus: false,
-  });
+  const { data, error, isLoading } = useSWR("/me", fetchAPI);
   try {
     return data;
   } catch (e) {
@@ -55,10 +53,7 @@ export function useProducts(query: string, page: number) {
   const offset = 5 * page;
   const { data, error, isLoading } = useSWR(
     "/search?limit=5&offset=" + offset + "&q=" + query,
-    fetchAPI,
-    {
-      revalidateOnFocus: false,
-    }
+    fetchAPI
   );
   try {
     return data;

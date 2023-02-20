@@ -10,6 +10,7 @@ import { LoginButtonHeader } from "./styled";
 
 export function Header() {
   const token = useGetToken();
+
   const dataUser = useMe();
   const [clicked, setClicked] = useState(false);
 
@@ -60,9 +61,7 @@ export function Header() {
         </Link>
 
         <div className={css.userContainer}>
-          <Body
-            className={`${css.user} ${token ? "" : css.inactiveCerrarSesion}`}
-          >
+          <Body className={` ${token ? css.user : css.inactiveCerrarSesion}`}>
             {dataUser ? dataUser.email : ""}
           </Body>
           <Link
