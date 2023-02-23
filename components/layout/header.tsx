@@ -35,10 +35,27 @@ export function Header() {
         </Link>
         <BurguerButtons clicked={clicked} handleClick={clickBurguerButtons} />
       </div>
-      <Link href="/signin">
-        <LoginButtonHeader>Ingresar</LoginButtonHeader>
-      </Link>
-
+      {token ? (
+        <div>
+          <Body
+            className={`${css.user} ${css.minHeader}`}
+            style={{ margin: "0px" }}
+          >
+            {dataUser ? dataUser.email : ""}
+          </Body>
+          <Link
+            href="/logout"
+            onClick={clickBurguerButtons}
+            className={`${css.cerrarSesion} ${css.minHeader}`}
+          >
+            <Large style={{ margin: "7px 0px 0px" }}>CERRAR SESIÓN</Large>
+          </Link>
+        </div>
+      ) : (
+        <Link href="/signin">
+          <LoginButtonHeader>Ingresar</LoginButtonHeader>
+        </Link>
+      )}
       <div className={`${css.nav} ${clicked ? "" : css.inactive}`}>
         <Link
           href="/signin"
