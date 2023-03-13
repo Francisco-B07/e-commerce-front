@@ -12,10 +12,11 @@ El LogIn es mediante autorización passwordless.
 - SWR
 - React-Hook-Form
 
+# Links
 [Link de la web app](https://e-commerce-front-six.vercel.app/) \
 [Link del Backend](https://github.com/Francisco-B07/e-commerce-back)
 
 
 ## Usuario de prueba (Comprador) Mercado Pago: 
-User: TEST_USER_1300394600
+User: TEST_USER_1300394600 \
 Contraseña: czcPKJUBvx
