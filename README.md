@@ -1,8 +1,8 @@
 # Frontend E-Commerce
-E-Commerce desarrollado en Next y React donde los usuarios pueden comprar uilizando MercadoPago como pasarela de pago. (El cobro solo funciona con cuentas de prueba) \
+E-Commerce desarrollado en Next y React donde los usuarios pueden comprar uilizando Mercado Pago (El cobro solo funciona con cuentas de prueba) \
 Se utilizó Styled-components para desarrollar la UI, SWR para fetchear la data y Recoil como manejador de estado. \
-Se aplicaron técnicas como: Critical Css para mejorar el rendimiento. \
-El login se realiza mediante autorización passwordless. \
+Se aplico la técnica Critical Css para mejorar el rendimiento. \
+El LogIn es mediante autorización passwordless.
 
 # Tecnologías Usadas:
 - React.
